@@ -61,16 +61,10 @@ Once GHC and cabal are installed, the simplest way to install ogma is with:
 ```sh
 $ git clone https://github.com/nasa/ogma.git
 $ cd ogma
-$ cabal v1-sandbox init
-$ cabal v1-sandbox add-source ogma-*/
-$ cabal v1-install alex happy
-$ cabal v1-install ogma-cli/ copilot
-```
-
-After that, the ogma executable will be generated in the directory
-`./.cabal-sandbox/bin/`, which one can add to the `PATH` with:
-```
-$ export PATH="$PWD/.cabal-sandbox/bin/:$PATH"
+$ export PATH=$HOME/.cabal/bin:$PATH
+$ cabal update
+$ cabal install BNFC
+$ cabal install ogma-cli/
 ```
 
 # Usage
